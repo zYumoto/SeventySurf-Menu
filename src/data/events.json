@@ -1,0 +1,72 @@
+[
+  {
+    "id": "monday-closed",
+    "date": "Every Monday",
+    "day": "Monday",
+    "title": "House Reset",
+    "description": "Closed for prep, playlist refresh and new specials testing.",
+    "time": "Closed",
+    "type": "Prep",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "tuesday-tacos",
+    "date": "Every Tuesday",
+    "day": "Tuesday",
+    "title": "Taco Tide",
+    "description": "Coastal tacos, margarita flights and laid-back early week energy.",
+    "time": "18:00-22:30",
+    "type": "Special Dinner",
+    "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "wednesday-acoustic",
+    "date": "Every Wednesday",
+    "day": "Wednesday",
+    "title": "Acoustic Current",
+    "description": "Live acoustic sets, signature drinks and tables made for long conversations.",
+    "time": "20:00-23:30",
+    "type": "Live Music",
+    "image": "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "thursday-happy-hour",
+    "date": "Every Thursday",
+    "day": "Thursday",
+    "title": "Golden Hour",
+    "description": "Selected cocktails, oysters, burgers and a sunset playlist before the weekend starts.",
+    "time": "17:00-20:00",
+    "type": "Happy Hour",
+    "image": "https://images.unsplash.com/photo-1532635241-17e820acc59f?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "friday-dj",
+    "date": "Every Friday",
+    "day": "Friday",
+    "title": "Night Surf DJ Set",
+    "description": "House, disco and Brazilian grooves after dinner service.",
+    "time": "21:30-02:00",
+    "type": "DJ Night",
+    "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "saturday-brunch",
+    "date": "Every Saturday",
+    "day": "Saturday",
+    "title": "Beach Brunch",
+    "description": "Late brunch, fresh plates, cold drinks and weekend tables for groups.",
+    "time": "12:00-16:00",
+    "type": "Brunch",
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    "id": "sunday-family",
+    "date": "Every Sunday",
+    "day": "Sunday",
+    "title": "Sunday Low Tide",
+    "description": "Slow lunch, seafood specials and mellow vinyl until sunset.",
+    "time": "12:00-22:00",
+    "type": "Lunch",
+    "image": "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80"
+  }
+]
