@@ -11,8 +11,8 @@ export function MenuPage() {
         <MotionReveal>
           <SectionHeading
             eyebrow="Menu"
-            title="Cocktails, coastal plates and late-night cravings."
-            description="Filter the menu by category and build the table around drinks, starters, mains, burgers or dessert."
+            title="Burgers, drinks, cervejas e porções para a mesa."
+            description="Filtre por categoria e escolha entre autorais, clássicos, baldes, sanduíches, acompanhamentos e bebidas sem álcool."
           />
         </MotionReveal>
       </section>

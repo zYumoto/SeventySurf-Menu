@@ -1,102 +1,468 @@
-[
-  {
-    "id": "sunset-punch",
-    "name": "Sunset Punch",
-    "category": "Drinks",
-    "description": "A bright house cocktail with aged rum, passion fruit, lime, toasted pineapple and a sea-salt finish.",
-    "price": 42,
-    "featured": true,
-    "image": "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["signature", "tropical"]
-  },
-  {
-    "id": "black-swell-negroni",
-    "name": "Black Swell Negroni",
-    "category": "Drinks",
-    "description": "Gin, vermouth, bitter orange and cold brew reduction for a darker late-night classic.",
-    "price": 46,
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["spirit-forward"]
-  },
-  {
-    "id": "crispy-calamari",
-    "name": "Crispy Calamari",
-    "category": "Starters",
-    "description": "Lightly fried calamari with lemon aioli, smoked paprika and fresh herbs.",
-    "price": 54,
-    "featured": true,
-    "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["shareable"]
-  },
-  {
-    "id": "tuna-tostadas",
-    "name": "Tuna Tostadas",
-    "category": "Starters",
-    "description": "Fresh tuna, avocado cream, sesame, citrus ponzu and crisp corn tostadas.",
-    "price": 58,
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["fresh", "coastal"]
-  },
-  {
-    "id": "reef-grilled-fish",
-    "name": "Reef Grilled Fish",
-    "category": "Main Dishes",
-    "description": "Charred catch of the day with coconut rice, grilled vegetables and herb vinaigrette.",
-    "price": 86,
-    "featured": true,
-    "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["house favorite"]
-  },
-  {
-    "id": "short-rib-gnocchi",
-    "name": "Short Rib Gnocchi",
-    "category": "Main Dishes",
-    "description": "Potato gnocchi, slow-braised short rib, parmesan, basil and red wine jus.",
-    "price": 78,
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["comfort"]
-  },
-  {
-    "id": "seventy-smash",
-    "name": "Seventy Smash Burger",
-    "category": "Burgers/Sandwiches",
-    "description": "Double smash patty, cheddar, pickles, caramelized onion and house beach sauce.",
-    "price": 56,
-    "featured": true,
-    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["best seller"]
-  },
-  {
-    "id": "grilled-chicken-sandwich",
-    "name": "Grilled Chicken Sandwich",
-    "category": "Burgers/Sandwiches",
-    "description": "Marinated chicken, slaw, pepper jack, lime mayo and toasted brioche.",
-    "price": 48,
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["bright"]
-  },
-  {
-    "id": "coconut-panna-cotta",
-    "name": "Coconut Panna Cotta",
-    "category": "Desserts",
-    "description": "Silky coconut cream, mango, toasted cashew and lime zest.",
-    "price": 34,
-    "featured": true,
-    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["light"]
-  },
-  {
-    "id": "chocolate-rum-tart",
-    "name": "Chocolate Rum Tart",
-    "category": "Desserts",
-    "description": "Dark chocolate ganache, rum caramel, cocoa crumble and vanilla cream.",
-    "price": 38,
-    "featured": false,
-    "image": "https://images.unsplash.com/photo-1611293388250-580b08c4a145?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["rich"]
-  }
-]
+{
+  "restaurant": "Seventy Surf",
+  "currency": "BRL",
+  "menu": [
+    {
+      "slug": "burgers",
+      "category": "Burgers",
+      "items": [
+        {
+          "name": "Burger Bacon",
+          "price": 39,
+          "description": "Hambúrguer artesanal de blend bovino suculento de 180g, pão brioche amanteigado macio, generosamente coberto com três fatias de queijo cheddar e finalizado com tiras crocantes de bacon."
+        },
+        {
+          "name": "Melt",
+          "price": 37.9,
+          "description": "Hambúrguer artesanal de blend bovino suculento de 180g, pão preto finalizado com fubá, três fatias de queijo cheddar e cebola caramelizada."
+        },
+        {
+          "name": "Smash Duplo",
+          "price": 34.9,
+          "description": "Dois hambúrgueres artesanais de blend bovino de 80g cada, servidos no pão brioche amanteigado com três fatias de queijo cheddar."
+        },
+        {
+          "name": "Smash",
+          "price": 28,
+          "description": "Hambúrguer artesanal de blend bovino de 80g, servido no pão brioche amanteigado com queijo cheddar fatiado."
+        },
+        {
+          "name": "Burger de Grão de Bico",
+          "price": 32,
+          "description": "Hambúrguer de grão de bico produzido na casa, pão brioche amanteigado e queijo mussarela derretido."
+        }
+      ]
+    },
+    {
+      "slug": "acompanhamentos",
+      "category": "Acompanhamentos",
+      "items": [
+        {
+          "name": "Batata Frita (individual)",
+          "price": 12,
+          "description": "Porção individual de batata frita (100g), temperada com sal, pimenta preta e páprica picante."
+        },
+        {
+          "name": "Batata Frita",
+          "price": 45,
+          "description": "Porção de 450g de batata frita, temperada com sal, pimenta preta e páprica picante."
+        },
+        {
+          "name": "Batata Frita com Cheddar & Bacon",
+          "price": 67,
+          "description": "Porção de 450g de batata frita, temperada com sal, pimenta preta e páprica picante, coberta com queijo cheddar derretido cremoso e cubinhos de bacon frito."
+        }
+      ]
+    },
+    {
+      "slug": "para-compartilhar",
+      "category": "Para Compartilhar",
+      "items": [
+        {
+          "name": "Mini Burger com Batata Frita",
+          "price": 79,
+          "description": "Porção com 4 mini burgers com hambúrguer artesanal (40g cada), pão brioche e queijo cheddar. Acompanha porção de batata frita crinkles (100g), temperada com sal, pimenta preta e páprica picante."
+        }
+      ]
+    },
+    {
+      "slug": "sanduiches",
+      "category": "Sanduíches",
+      "items": [
+        {
+          "name": "Carne de Panela",
+          "price": 39,
+          "description": "Pão ciabatta artesanal crocante, recheado com carne de panela, mussarela derretida e folhas de agrião fresquinhas."
+        },
+        {
+          "name": "Carne de Jaca",
+          "price": 38,
+          "description": "Sanduíche vegetariano. Pão ciabatta artesanal crocante, recheado com carne de jaca, mussarela derretida e tomate."
+        },
+        {
+          "name": "Pernil",
+          "price": 37,
+          "description": "Pão ciabatta artesanal crocante, recheado com pernil desfiado com tempero delicioso e um toque especial de pedacinhos de abacaxi."
+        }
+      ]
+    },
+    {
+      "slug": "sucos",
+      "category": "Sucos",
+      "items": [
+        {
+          "name": "Laranja com Gengibre",
+          "price": 14,
+          "description": "Suco de laranja natural com xarope de gengibre."
+        },
+        {
+          "name": "Limão com Manjericão",
+          "price": 13,
+          "description": "Suco de limão natural batido com folhas de manjericão."
+        },
+        {
+          "name": "Abacaxi com Hortelã",
+          "price": 14,
+          "description": "Suco natural de abacaxi batido com hortelã."
+        }
+      ]
+    },
+    {
+      "slug": "softs",
+      "category": "Softs",
+      "items": [
+        {
+          "name": "Refrigerante",
+          "price": 8,
+          "description": "Pepsi, Pepsi Black, Guaraná, Guaraná Zero, Tônica, Tônica Zero, Soda e Soda Zero."
+        },
+        {
+          "name": "Água",
+          "price": 6,
+          "description": "Água mineral."
+        },
+        {
+          "name": "Água com Gás",
+          "price": 7,
+          "description": "Água mineral com gás."
+        }
+      ]
+    },
+    {
+      "slug": "mocktails",
+      "category": "Mocktails",
+      "items": [
+        {
+          "name": "Mobisco",
+          "price": 28,
+          "description": "Suco de limão, infusão de hibisco, hortelã, xarope simples e água com gás."
+        },
+        {
+          "name": "Xeque Lari (sem álcool)",
+          "price": 25,
+          "description": "Limão, chá mate, xarope de guaraná, xarope de gengibre e hortelã."
+        },
+        {
+          "name": "Pink Lemonade",
+          "price": 24,
+          "description": "Suco de limão, grenadine e água com gás."
+        }
+      ]
+    },
+    {
+      "slug": "cervejas",
+      "category": "Cervejas",
+      "items": [
+        {
+          "name": "Corona",
+          "price": 14,
+          "description": "Long neck."
+        },
+        {
+          "name": "Corona Zero",
+          "price": 14,
+          "description": "Long neck."
+        },
+        {
+          "name": "Becks",
+          "price": 13,
+          "description": "Long neck."
+        },
+        {
+          "name": "Stella Gold",
+          "price": 13,
+          "description": "Long neck."
+        },
+        {
+          "name": "Spaten",
+          "price": 12,
+          "description": "Long neck."
+        },
+        {
+          "name": "Bud",
+          "price": 12,
+          "description": "Long neck."
+        }
+      ]
+    },
+    {
+      "slug": "cervejas-especiais",
+      "category": "Cervejas Especiais",
+      "items": [
+        {
+          "name": "Midway IPA",
+          "price": 18,
+          "description": "Long neck."
+        },
+        {
+          "name": "Patagônia",
+          "price": 16,
+          "description": "Long neck."
+        },
+        {
+          "name": "Colorado",
+          "price": 16,
+          "description": "Long neck."
+        }
+      ]
+    },
+    {
+      "slug": "baldes",
+      "category": "Baldes",
+      "items": [
+        {
+          "name": "Corona",
+          "price": 69,
+          "description": "Long neck - 5 unidades."
+        },
+        {
+          "name": "Corona Zero",
+          "price": 69,
+          "description": "Long neck - 5 unidades."
+        },
+        {
+          "name": "Becks",
+          "price": 64,
+          "description": "Long neck - 5 unidades."
+        },
+        {
+          "name": "Stella Gold",
+          "price": 64,
+          "description": "Long neck - 5 unidades."
+        },
+        {
+          "name": "Spaten",
+          "price": 59,
+          "description": "Long neck - 5 unidades."
+        },
+        {
+          "name": "Bud",
+          "price": 59,
+          "description": "Long neck - 5 unidades."
+        }
+      ]
+    },
+    {
+      "slug": "drinks-autorais",
+      "category": "Drinks Autorais",
+      "items": [
+        {
+          "name": "Martí",
+          "price": 37,
+          "description": "Licor 43, Jose Cuervo ouro, suco de limão e hortelã. Refrescante e perfumado."
+        },
+        {
+          "name": "Brisa",
+          "price": 37,
+          "description": "Jack Daniels Apple, xarope de maracujá, suco de limão, Angostura e albumina. Vibrante e aromático."
+        },
+        {
+          "name": "Raid Sour",
+          "price": 34,
+          "description": "Whisky sabor canela, suco de limão siciliano e xarope simples. Refrescante, picante e marcante."
+        },
+        {
+          "name": "Cachaça Sour",
+          "price": 34,
+          "description": "Cachaça ouro, suco de limão siciliano e Angostura. Um sour brasileiro, equilibrado e sofisticado."
+        },
+        {
+          "name": "Latino",
+          "price": 32,
+          "description": "Vodka, suco de laranja, morango, pimenta dedo de moça e espuma artesanal de gengibre. Refrescante, exótico e cheio de personalidade."
+        },
+        {
+          "name": "Xeque Lari",
+          "price": 29,
+          "description": "Bacardi prata, limão, xarope de guaraná e chá mate. Doce e refrescante."
+        },
+        {
+          "name": "Jorge Amado",
+          "price": 29,
+          "description": "Cachaça prata, cachaça com canela, suco de limão, polpa de maracujá e folhas de manjericão. Refrescante, tropical e cheio de camadas."
+        },
+        {
+          "name": "Honey Deuxe",
+          "price": 29,
+          "description": "Vodka, grenadine e suco de limão. Doce na medida, cítrico e fácil de beber."
+        }
+      ]
+    },
+    {
+      "slug": "classicos",
+      "category": "Clássicos",
+      "items": [
+        {
+          "name": "Aperol Spritz",
+          "price": 31.5,
+          "description": "Aperol, espumante brut, água com gás e laranja bahia."
+        },
+        {
+          "name": "Gin Tônica Clássica",
+          "price": 31,
+          "description": "Gin, suco de laranja ou limão, tônica e especiarias."
+        },
+        {
+          "name": "Mojito",
+          "price": 29.5,
+          "description": "Mojito clarificado com técnica milk punch, Bacardi prata, suco de limão e xarope de hortelã artesanal."
+        },
+        {
+          "name": "Moscow Mule",
+          "price": 29,
+          "description": "Vodka, suco de limão, hortelã e espuma de gengibre artesanal."
+        },
+        {
+          "name": "Caipirinha",
+          "price": 24,
+          "description": "Cachaça prata, limão e açúcar."
+        }
+      ]
+    },
+    {
+      "slug": "mais-pedidos",
+      "category": "Mais Pedidos",
+      "items": [
+        {
+          "name": "Espresso Martini",
+          "price": 33,
+          "description": "Vodka, licor de café, café espresso, xarope simples e uma pitada de sal."
+        },
+        {
+          "name": "Whisky Sour",
+          "price": 33,
+          "description": "Jim Beam, suco de limão siciliano e Angostura."
+        },
+        {
+          "name": "Fitzgerald",
+          "price": 33,
+          "description": "Gin, suco de limão siciliano e Angostura."
+        },
+        {
+          "name": "Carajillo",
+          "price": 32.5,
+          "description": "Licor 43, café espresso e albumina."
+        },
+        {
+          "name": "Penicillin",
+          "price": 30,
+          "description": "Red Label, suco de limão, mel e gengibre."
+        },
+        {
+          "name": "Negroni",
+          "price": 29,
+          "description": "Gin, Campari e Martini Rosso."
+        }
+      ]
+    },
+    {
+      "slug": "energeticos",
+      "category": "Energéticos",
+      "items": [
+        {
+          "name": "Red Bull",
+          "price": 16,
+          "description": "250ml - Tradicional, Tropical, Zero e Melancia."
+        }
+      ]
+    },
+    {
+      "slug": "drinks-prontos",
+      "category": "Drinks Prontos",
+      "items": [
+        {
+          "name": "Xeque Mate",
+          "price": 16,
+          "description": "Lata."
+        },
+        {
+          "name": "Beats",
+          "price": 16,
+          "description": "Long neck."
+        },
+        {
+          "name": "Smirnoff Ice",
+          "price": 16,
+          "description": "Long neck."
+        }
+      ]
+    },
+    {
+      "slug": "drinks-red-bull",
+      "category": "Drinks by Red Bull",
+      "items": [
+        {
+          "name": "Meia Sete",
+          "price": 32,
+          "description": "Gin acompanhado de uma lata Red Bull Zero 250ml."
+        },
+        {
+          "name": "Vodka + Red Bull",
+          "price": 33,
+          "description": "Vodka acompanhada de uma lata Red Bull 250ml, qualquer sabor."
+        }
+      ]
+    },
+    {
+      "slug": "doses",
+      "category": "Doses",
+      "items": [
+        {
+          "name": "Smirnoff (Vodka)",
+          "price": 16,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "Atlantis (Gin)",
+          "price": 20,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "Licor 43",
+          "price": 30,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "Red Label",
+          "price": 26,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "Black Label",
+          "price": 29,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "José Cuervo Ouro (Tequila)",
+          "price": 29,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "Cachaça Prata",
+          "price": 14,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "Cachaça Ouro",
+          "price": 15,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "Canelinha",
+          "price": 14,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "Jambu",
+          "price": 20,
+          "description": "Dose padrão 50ml."
+        },
+        {
+          "name": "Campari",
+          "price": 19,
+          "description": "Dose padrão 50ml."
+        }
+      ]
+    }
+  ]
+}

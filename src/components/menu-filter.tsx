@@ -13,7 +13,7 @@ export function MenuFilter({ items }: MenuFilterProps) {
   const [active, setActive] = useState<MenuCategory>("All");
 
   const visibleItems = useMemo(() => {
-    if (active === "All") return items;
+    if (active === "Todos") return items;
     return items.filter((item) => item.category === active);
   }, [active, items]);
 

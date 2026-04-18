@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import type { MenuItem } from "@/lib/data";
+import { formatCurrency, type MenuItem } from "@/lib/data";
 
 type MenuCardProps = {
   item: MenuItem;
@@ -24,7 +24,7 @@ export function MenuCard({ item }: MenuCardProps) {
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary">{item.category}</p>
             <h3 className="mt-2 font-display text-xl font-bold text-white">{item.name}</h3>
           </div>
-          <p className="rounded-md bg-primary/14 px-3 py-2 text-sm font-black text-primary">R$ {item.price}</p>
+          <p className="rounded-md bg-primary/14 px-3 py-2 text-sm font-black text-primary">{formatCurrency(item.price)}</p>
         </div>
         <p className="mt-3 min-h-[72px] text-sm leading-6 text-white/62">{item.description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
