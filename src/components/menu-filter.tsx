@@ -10,7 +10,7 @@ type MenuFilterProps = {
 };
 
 export function MenuFilter({ items }: MenuFilterProps) {
-  const [active, setActive] = useState<MenuCategory>("All");
+  const [active, setActive] = useState<MenuCategory>("Todos");
 
   const visibleItems = useMemo(() => {
     if (active === "Todos") return items;
