@@ -2,11 +2,13 @@ import { Instagram, MessageCircle, Waves } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
+import { useAdminData } from "@/lib/admin-store";
 import { useLanguage } from "@/lib/i18n";
-import { navItems, siteConfig } from "@/lib/site";
+import { navItems } from "@/lib/site";
 
 export function Footer() {
   const { copy } = useLanguage();
+  const { settings } = useAdminData();
 
   return (
     <footer className="border-t border-white/10 bg-[#070b0b]">
@@ -38,17 +40,17 @@ export function Footer() {
         <div>
           <p className="mb-4 text-sm font-bold uppercase tracking-[0.18em] text-white">{copy.footer.visit}</p>
           <div className="space-y-3 text-sm text-white/[0.62]">
-            <p>{siteConfig.address}</p>
-            <p>{siteConfig.hours}</p>
+            <p>{settings.address}</p>
+            <p>{settings.hours}</p>
           </div>
           <div className="mt-5 flex flex-wrap gap-3">
             <Button asChild size="sm">
-              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer">
+              <a href={settings.whatsapp} target="_blank" rel="noreferrer">
                 <MessageCircle className="mr-2 h-4 w-4" /> {copy.actions.whatsapp}
               </a>
             </Button>
             <Button asChild variant="outline" size="sm">
-              <a href={siteConfig.instagram} target="_blank" rel="noreferrer">
+              <a href={settings.instagram} target="_blank" rel="noreferrer">
                 <Instagram className="mr-2 h-4 w-4" /> {copy.nav.instagram}
               </a>
             </Button>

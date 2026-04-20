@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import { MenuCard } from "@/components/menu-card";
 import { LanguageSwitch } from "@/components/language-switch";
 import { Button } from "@/components/ui/button";
-import { menuCategories, type MenuCategory, type MenuItem } from "@/lib/data";
+import type { MenuCategory, MenuItem } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 type MenuFilterProps = {
@@ -12,6 +12,7 @@ type MenuFilterProps = {
 
 export function MenuFilter({ items }: MenuFilterProps) {
   const [active, setActive] = useState<MenuCategory>("Todos");
+  const menuCategories = useMemo(() => ["Todos", ...Array.from(new Set(items.map((item) => item.category)))], [items]);
 
   const visibleItems = useMemo(() => {
     if (active === "Todos") return items;

@@ -5,11 +5,12 @@ import { ReservationForm } from "@/components/reservation-form";
 import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useAdminData } from "@/lib/admin-store";
 import { useLanguage } from "@/lib/i18n";
-import { siteConfig } from "@/lib/site";
 
 export function ContactPage() {
   const { copy } = useLanguage();
+  const { settings } = useAdminData();
 
   return (
     <section className="container grid gap-10 pb-20 pt-32 md:pt-40 lg:grid-cols-[0.92fr_1.08fr]">
@@ -25,24 +26,24 @@ export function ContactPage() {
             <p className="flex items-center gap-3 font-bold text-white">
               <MapPin className="h-5 w-5 text-primary" /> {copy.contact.address}
             </p>
-            <p className="mt-3 text-white/[0.64]">{siteConfig.address}</p>
+            <p className="mt-3 text-white/[0.64]">{settings.address}</p>
           </Card>
           <Card className="bg-white/[0.045] p-5">
             <p className="flex items-center gap-3 font-bold text-white">
               <Phone className="h-5 w-5 text-primary" /> {copy.contact.hours}
             </p>
-            <p className="mt-3 text-white/[0.64]">{siteConfig.hours}</p>
+            <p className="mt-3 text-white/[0.64]">{settings.hours}</p>
           </Card>
         </div>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Button asChild size="lg">
-            <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer">
+            <a href={settings.whatsapp} target="_blank" rel="noreferrer">
               <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
             </a>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <a href={siteConfig.instagram} target="_blank" rel="noreferrer">
+            <a href={settings.instagram} target="_blank" rel="noreferrer">
               <Instagram className="mr-2 h-4 w-4" /> Instagram
             </a>
           </Button>

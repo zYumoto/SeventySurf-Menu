@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { AboutPage } from "@/pages/about";
+import { AdminPage } from "@/pages/admin";
 import { ContactPage } from "@/pages/contact";
 import { EventsPage } from "@/pages/events";
 import { HomePage } from "@/pages/home";
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </main>
       <Footer />

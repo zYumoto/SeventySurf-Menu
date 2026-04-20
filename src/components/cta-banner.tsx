@@ -2,8 +2,8 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
+import { useAdminData } from "@/lib/admin-store";
 import { useLanguage } from "@/lib/i18n";
-import { siteConfig } from "@/lib/site";
 
 type CtaBannerProps = {
   title?: string;
@@ -15,6 +15,7 @@ export function CtaBanner({
   description
 }: CtaBannerProps) {
   const { copy } = useLanguage();
+  const { settings } = useAdminData();
   const finalTitle = title ?? copy.cta.title;
   const finalDescription = description ?? copy.cta.description;
 
@@ -32,7 +33,7 @@ export function CtaBanner({
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer">
+            <a href={settings.whatsapp} target="_blank" rel="noreferrer">
               {copy.actions.whatsapp}
             </a>
           </Button>

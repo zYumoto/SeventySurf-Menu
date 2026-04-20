@@ -11,8 +11,8 @@ import { SectionHeading } from "@/components/section-heading";
 import { Testimonials } from "@/components/testimonials";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useAdminData } from "@/lib/admin-store";
 import { useLanguage } from "@/lib/i18n";
-import { featuredMenuItems, upcomingEvents } from "@/lib/data";
 
 const experiences = [
   {
@@ -31,6 +31,7 @@ const experiences = [
 
 export function HomePage() {
   const { copy } = useLanguage();
+  const { featuredMenuItems, upcomingEvents } = useAdminData();
 
   return (
     <>

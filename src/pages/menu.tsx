@@ -2,11 +2,12 @@ import { CtaBanner } from "@/components/cta-banner";
 import { MenuFilter } from "@/components/menu-filter";
 import { MotionReveal } from "@/components/motion-reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { menuItems } from "@/lib/data";
+import { useAdminData } from "@/lib/admin-store";
 import { useLanguage } from "@/lib/i18n";
 
 export function MenuPage() {
   const { copy } = useLanguage();
+  const { visibleMenuItems } = useAdminData();
 
   return (
     <>
@@ -17,7 +18,7 @@ export function MenuPage() {
       </section>
       <section className="container pb-20">
         <MotionReveal delay={0.08}>
-          <MenuFilter items={menuItems} />
+          <MenuFilter items={visibleMenuItems} />
         </MotionReveal>
       </section>
       <CtaBanner title={copy.menu.ctaTitle} description={copy.menu.ctaDescription} />

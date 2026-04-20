@@ -2,11 +2,12 @@ import { CtaBanner } from "@/components/cta-banner";
 import { EventCard } from "@/components/event-card";
 import { MotionReveal } from "@/components/motion-reveal";
 import { SectionHeading } from "@/components/section-heading";
-import { events } from "@/lib/data";
+import { useAdminData } from "@/lib/admin-store";
 import { useLanguage } from "@/lib/i18n";
 
 export function EventsPage() {
   const { copy } = useLanguage();
+  const { visibleEvents } = useAdminData();
 
   return (
     <>
@@ -21,7 +22,7 @@ export function EventsPage() {
       </section>
       <section className="container pb-20">
         <div className="grid gap-5 lg:grid-cols-2">
-          {events.map((event, index) => (
+          {visibleEvents.map((event, index) => (
             <MotionReveal key={event.id} delay={index * 0.04}>
               <EventCard event={event} />
             </MotionReveal>
