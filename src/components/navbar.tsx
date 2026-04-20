@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
+import { LanguageSwitch } from "@/components/language-switch";
 import { useLanguage } from "@/lib/i18n";
 import { navItems, siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -10,7 +11,7 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
-  const { copy, language, toggleLanguage } = useLanguage();
+  const { copy } = useLanguage();
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#091112]/[0.78] backdrop-blur-xl">
@@ -41,15 +42,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button
-            type="button"
-            variant="outline"
-            onClick={toggleLanguage}
-            aria-label={`Switch to ${copy.language.switchTo}`}
-            className="min-w-24"
-          >
-            {language.toUpperCase()} / {language === "pt" ? "EN" : "PT"}
-          </Button>
+          <LanguageSwitch />
           <Button asChild variant="outline">
             <a href={siteConfig.instagram} target="_blank" rel="noreferrer">
               {copy.nav.instagram}
@@ -81,10 +74,7 @@ export function Navbar() {
                 {copy.nav[item.labelKey]}
               </Link>
             ))}
-            <Button type="button" variant="outline" className="mt-2 justify-between" onClick={toggleLanguage}>
-              <span>{copy.language.current}</span>
-              <span>{copy.language.switchTo}</span>
-            </Button>
+            <LanguageSwitch className="mt-2 w-fit" />
             <Button asChild className="mt-2">
               <Link to="/contact" onClick={() => setOpen(false)}>
                 {copy.nav.reserve}

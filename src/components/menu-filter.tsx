@@ -3,7 +3,6 @@ import { useMemo, useState } from "react";
 import { MenuCard } from "@/components/menu-card";
 import { Button } from "@/components/ui/button";
 import { menuCategories, type MenuCategory, type MenuItem } from "@/lib/data";
-import { useLanguage } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
 type MenuFilterProps = {
@@ -12,7 +11,6 @@ type MenuFilterProps = {
 
 export function MenuFilter({ items }: MenuFilterProps) {
   const [active, setActive] = useState<MenuCategory>("Todos");
-  const { copy, language, toggleLanguage } = useLanguage();
 
   const visibleItems = useMemo(() => {
     if (active === "Todos") return items;
@@ -21,12 +19,6 @@ export function MenuFilter({ items }: MenuFilterProps) {
 
   return (
     <div>
-      <div className="mb-4 flex flex-col gap-3 rounded-lg border border-white/10 bg-white/[0.045] p-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm font-semibold text-white/[0.68]">{copy.language.current}</p>
-        <Button type="button" variant="outline" onClick={toggleLanguage} className="sm:min-w-36">
-          {language.toUpperCase()} / {language === "pt" ? "EN" : "PT"}
-        </Button>
-      </div>
       <div className="flex gap-2 overflow-x-auto pb-3">
         {menuCategories.map((category) => (
           <Button
