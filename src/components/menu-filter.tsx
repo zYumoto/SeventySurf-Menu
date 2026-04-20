@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 
 import { MenuCard } from "@/components/menu-card";
+import { LanguageSwitch } from "@/components/language-switch";
 import { Button } from "@/components/ui/button";
 import { menuCategories, type MenuCategory, type MenuItem } from "@/lib/data";
 import { cn } from "@/lib/utils";
@@ -19,6 +20,9 @@ export function MenuFilter({ items }: MenuFilterProps) {
 
   return (
     <div>
+      <div className="mb-5 flex justify-end">
+        <LanguageSwitch />
+      </div>
       <div className="flex gap-2 overflow-x-auto pb-3">
         {menuCategories.map((category) => (
           <Button
