@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import { Button } from "@/components/ui/button";
 import { LanguageSwitch } from "@/components/language-switch";
+import { SeventyLogo } from "@/components/seventy-logo";
 import { useAdminData } from "@/lib/admin-store";
 import { useLanguage } from "@/lib/i18n";
 import { navItems } from "@/lib/site";
@@ -18,14 +19,8 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#091112]/[0.78] backdrop-blur-xl">
       <div className="container flex h-18 items-center justify-between py-4">
-        <Link to="/" className="group flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/15 font-display text-lg font-black text-primary">
-            70
-          </span>
-          <span className="leading-none">
-            <span className="block font-display text-lg font-black uppercase tracking-[0.16em] text-white">Seventy</span>
-            <span className="block text-xs font-semibold uppercase tracking-[0.28em] text-primary">Surf</span>
-          </span>
+        <Link to="/" className="group flex items-center" onClick={() => setOpen(false)}>
+          <SeventyLogo markClassName="h-12 w-40 text-white transition group-hover:text-primary" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

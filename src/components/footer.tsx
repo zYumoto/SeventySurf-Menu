@@ -1,6 +1,7 @@
 import { Instagram, MessageCircle, Waves } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import { SeventyLogo } from "@/components/seventy-logo";
 import { Button } from "@/components/ui/button";
 import { useAdminData } from "@/lib/admin-store";
 import { useLanguage } from "@/lib/i18n";
@@ -14,12 +15,9 @@ export function Footer() {
     <footer className="border-t border-white/10 bg-[#070b0b]">
       <div className="container grid gap-10 py-12 md:grid-cols-[1.3fr_0.8fr_0.9fr]">
         <div>
-          <div className="mb-5 flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-primary/40 bg-primary/15 font-display text-lg font-black text-primary">
-              70
-            </span>
+          <div className="mb-5">
+            <SeventyLogo markClassName="h-14 w-44 text-white" />
             <div>
-              <p className="font-display text-xl font-black uppercase tracking-[0.16em] text-white">Seventy Surf</p>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">{copy.footer.tagline}</p>
             </div>
           </div>
