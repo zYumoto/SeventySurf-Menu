@@ -74,7 +74,7 @@ export function Navbar() {
                 {copy.nav[item.labelKey]}
               </Link>
             ))}
-            <LanguageSwitch className="mt-2 w-fit" />
+            <LanguageSwitch className="mt-2" />
             <Button asChild className="mt-2">
               <Link to="/contact" onClick={() => setOpen(false)}>
                 {copy.nav.reserve}
