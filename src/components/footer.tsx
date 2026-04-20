@@ -16,7 +16,9 @@ export function Footer() {
       <div className="container grid gap-10 py-12 md:grid-cols-[1.3fr_0.8fr_0.9fr]">
         <div>
           <div className="mb-5">
-            <SeventyLogo markClassName="h-14 w-44 text-white" />
+            <Link to="/" aria-label="Home">
+              <SeventyLogo markClassName="h-14 w-44 text-white transition hover:text-primary" />
+            </Link>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-primary">{copy.footer.tagline}</p>
             </div>
