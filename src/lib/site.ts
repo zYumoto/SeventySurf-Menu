@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Seventy Surf",
-  phone: "+55 13 98120-0835",
-  whatsapp: "https://wa.me/5513981200835",
+  phone: "+55 13 99731-6064",
+  whatsapp: "https://wa.me/5513997316064",
   instagram: "https://instagram.com/seventysurf",
   email: "contato.seventy@gmail.com",
   address: "Rua Quinze de Novembro, 53 - Centro, Santos - SP",
