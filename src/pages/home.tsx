@@ -1,4 +1,4 @@
-import { ArrowRight, ChefHat, Martini, Music2, Sparkles } from "lucide-react";
+import { ArrowRight, ChefHat, Martini, Music2, Waves } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { CtaBanner } from "@/components/cta-banner";
@@ -11,32 +11,27 @@ import { SectionHeading } from "@/components/section-heading";
 import { Testimonials } from "@/components/testimonials";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/lib/i18n";
 import { featuredMenuItems, upcomingEvents } from "@/lib/data";
 
 const experiences = [
   {
-    title: "Signature drinks",
-    description: "Bright tropical builds, darker classics and house cocktails made for the first toast and the last track.",
-    icon: Martini
+    icon: Waves
   },
   {
-    title: "Coastal food",
-    description: "Fresh starters, grilled plates, burgers and desserts with a menu that works for dinner or sharing.",
     icon: ChefHat
   },
   {
-    title: "Music after dark",
-    description: "Acoustic evenings, DJ nights and curated playlists that shift the house from dinner to nightlife.",
-    icon: Music2
+    icon: Martini
   },
   {
-    title: "Atmosphere",
-    description: "Surf references, warm light, premium service and a room that feels relaxed without losing polish.",
-    icon: Sparkles
+    icon: Music2
   }
 ];
 
 export function HomePage() {
+  const { copy } = useLanguage();
+
   return (
     <>
       <Hero />
@@ -44,18 +39,18 @@ export function HomePage() {
       <section className="container section-pad">
         <MotionReveal>
           <SectionHeading
-            eyebrow="The experience"
-            title="A coastal venue with a late-night pulse."
-            description="Seventy Surf mixes restaurant service, cocktail culture and music into one visit that can start with dinner and end under the lights."
+            eyebrow={copy.home.experience.eyebrow}
+            title={copy.home.experience.title}
+            description={copy.home.experience.description}
           />
         </MotionReveal>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {experiences.map((item, index) => (
-            <MotionReveal key={item.title} delay={index * 0.08}>
+            <MotionReveal key={copy.home.experiences[index].title} delay={index * 0.08}>
               <Card className="h-full bg-white/[0.045] p-5">
                 <item.icon className="h-8 w-8 text-primary" />
-                <h3 className="mt-5 font-display text-xl font-bold text-white">{item.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-white/62">{item.description}</p>
+                <h3 className="mt-5 font-display text-xl font-bold text-white">{copy.home.experiences[index].title}</h3>
+                <p className="mt-3 text-sm leading-6 text-white/[0.62]">{copy.home.experiences[index].description}</p>
               </Card>
             </MotionReveal>
           ))}
@@ -67,13 +62,13 @@ export function HomePage() {
           <MotionReveal>
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <SectionHeading
-                eyebrow="Featured menu"
-                title="The first round has standards."
-                description="House picks across cocktails, starters, mains, burgers and dessert."
+                eyebrow={copy.home.featured.eyebrow}
+                title={copy.home.featured.title}
+                description={copy.home.featured.description}
               />
               <Button asChild variant="outline">
                 <Link to="/menu">
-                  Full menu <ArrowRight className="ml-2 h-4 w-4" />
+                  {copy.actions.fullMenu} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -92,13 +87,13 @@ export function HomePage() {
         <MotionReveal>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <SectionHeading
-              eyebrow="Weekly agenda"
-              title="Music, brunch, happy hour and nights with movement."
-              description="Every week has a reason to come in earlier, stay later or gather the crew."
+              eyebrow={copy.home.agenda.eyebrow}
+              title={copy.home.agenda.title}
+              description={copy.home.agenda.description}
             />
             <Button asChild variant="outline">
               <Link to="/events">
-                See events <ArrowRight className="ml-2 h-4 w-4" />
+                {copy.actions.seeEvents} <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
@@ -116,12 +111,12 @@ export function HomePage() {
         <div className="container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <MotionReveal>
             <SectionHeading
-              eyebrow="About the house"
-              title="Surf culture, city nights and a table worth keeping."
-              description="The house is inspired by that moment after the beach when the day changes gear: salt still in the air, lights coming on, drinks landing at the table and music pulling the room together."
+              eyebrow={copy.home.story.eyebrow}
+              title={copy.home.story.title}
+              description={copy.home.story.description}
             />
             <Button asChild className="mt-8">
-              <Link to="/about">Read the story</Link>
+              <Link to="/about">{copy.actions.readStory}</Link>
             </Button>
           </MotionReveal>
           <MotionReveal delay={0.12}>
@@ -140,9 +135,9 @@ export function HomePage() {
       <section className="container section-pad">
         <MotionReveal>
           <SectionHeading
-            eyebrow="Gallery"
-            title="Warm tables, sharp drinks and ocean energy."
-            description="A visual direction ready for real venue photography."
+            eyebrow={copy.home.gallery.eyebrow}
+            title={copy.home.gallery.title}
+            description={copy.home.gallery.description}
           />
         </MotionReveal>
         <MotionReveal delay={0.1} className="mt-10">

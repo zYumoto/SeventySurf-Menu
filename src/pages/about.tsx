@@ -5,23 +5,26 @@ import { GalleryGrid } from "@/components/gallery-grid";
 import { MotionReveal } from "@/components/motion-reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { Card } from "@/components/ui/card";
+import { useLanguage } from "@/lib/i18n";
 
 const values = [
-  { title: "Experience", description: "Service, lighting, food and drinks designed as one full night.", icon: HeartHandshake },
-  { title: "Culture", description: "Surf attitude, city references and playlists that keep the room alive.", icon: Waves },
-  { title: "Good food", description: "A generous menu with fresh coastal plates and comfort where it counts.", icon: Utensils },
-  { title: "Authenticity", description: "Relaxed energy without costume surf cliches or generic nightlife gloss.", icon: Music }
+  { icon: HeartHandshake },
+  { icon: Waves },
+  { icon: Utensils },
+  { icon: Music }
 ];
 
 export function AboutPage() {
+  const { copy } = useLanguage();
+
   return (
     <>
       <section className="container grid gap-10 pb-16 pt-32 md:pt-40 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <MotionReveal>
           <SectionHeading
-            eyebrow="About"
-            title="A restaurant bar shaped by the coast after sunset."
-            description="Seventy Surf was imagined as the place where the beach day turns into dinner, drinks and music. The identity is coastal, but the room is urban: polished enough for a date, relaxed enough for friends, and lively enough for the second round."
+            eyebrow={copy.about.eyebrow}
+            title={copy.about.title}
+            description={copy.about.description}
           />
         </MotionReveal>
         <MotionReveal delay={0.12}>
@@ -40,18 +43,18 @@ export function AboutPage() {
         <div className="container">
           <MotionReveal>
             <SectionHeading
-              eyebrow="Values"
-              title="The brand is more than a menu."
-              description="Every touchpoint should make the venue feel like a lifestyle address, not a generic restaurant page."
+              eyebrow={copy.about.valuesEyebrow}
+              title={copy.about.valuesTitle}
+              description={copy.about.valuesDescription}
             />
           </MotionReveal>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value, index) => (
-              <MotionReveal key={value.title} delay={index * 0.08}>
+              <MotionReveal key={copy.about.values[index].title} delay={index * 0.08}>
                 <Card className="h-full bg-white/[0.045] p-5">
                   <value.icon className="h-8 w-8 text-primary" />
-                  <h3 className="mt-5 font-display text-xl font-bold text-white">{value.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-white/62">{value.description}</p>
+                  <h3 className="mt-5 font-display text-xl font-bold text-white">{copy.about.values[index].title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-white/[0.62]">{copy.about.values[index].description}</p>
                 </Card>
               </MotionReveal>
             ))}
@@ -61,7 +64,7 @@ export function AboutPage() {
 
       <section className="container section-pad">
         <MotionReveal>
-          <SectionHeading eyebrow="Visual mood" title="Salt, fire, music and warm tables." />
+          <SectionHeading eyebrow={copy.about.moodEyebrow} title={copy.about.moodTitle} />
         </MotionReveal>
         <MotionReveal delay={0.1} className="mt-10">
           <GalleryGrid />

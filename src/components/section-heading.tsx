@@ -16,7 +16,7 @@ export function SectionHeading({ eyebrow, title, description, align = "left", cl
         {eyebrow}
       </Badge>
       <h2 className="font-display text-3xl font-black leading-tight text-white sm:text-4xl md:text-5xl">{title}</h2>
-      {description ? <p className="mt-4 text-base leading-8 text-white/64 md:text-lg">{description}</p> : null}
+      {description ? <p className="mt-4 text-base leading-8 text-white/[0.64] md:text-lg">{description}</p> : null}
     </div>
   );
 }

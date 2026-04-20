@@ -1,12 +1,15 @@
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { formatCurrency, type MenuItem } from "@/lib/data";
+import { useLanguage } from "@/lib/i18n";
 
 type MenuCardProps = {
   item: MenuItem;
 };
 
 export function MenuCard({ item }: MenuCardProps) {
+  const { copy } = useLanguage();
+
   return (
     <Card className="group h-full overflow-hidden bg-white/[0.045]">
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -16,7 +19,7 @@ export function MenuCard({ item }: MenuCardProps) {
           className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-        {item.featured ? <Badge className="absolute left-4 top-4">Featured</Badge> : null}
+        {item.featured ? <Badge className="absolute left-4 top-4">{copy.menu.featuredLabel}</Badge> : null}
       </div>
       <div className="p-5">
         <div className="flex items-start justify-between gap-4">
@@ -26,10 +29,10 @@ export function MenuCard({ item }: MenuCardProps) {
           </div>
           <p className="rounded-md bg-primary/14 px-3 py-2 text-sm font-black text-primary">{formatCurrency(item.price)}</p>
         </div>
-        <p className="mt-3 min-h-[72px] text-sm leading-6 text-white/62">{item.description}</p>
+        <p className="mt-3 min-h-[72px] text-sm leading-6 text-white/[0.62]">{item.description}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {item.tags.map((tag) => (
-            <Badge key={tag} variant="outline" className="text-white/68">
+            <Badge key={tag} variant="outline" className="text-white/[0.68]">
               {tag}
             </Badge>
           ))}

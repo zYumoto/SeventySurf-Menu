@@ -3,16 +3,19 @@ import { EventCard } from "@/components/event-card";
 import { MotionReveal } from "@/components/motion-reveal";
 import { SectionHeading } from "@/components/section-heading";
 import { events } from "@/lib/data";
+import { useLanguage } from "@/lib/i18n";
 
 export function EventsPage() {
+  const { copy } = useLanguage();
+
   return (
     <>
       <section className="container pb-12 pt-32 md:pt-40">
         <MotionReveal>
           <SectionHeading
-            eyebrow="Weekly agenda"
-            title="The week moves from easy dinners to full nights."
-            description="Live music, DJ sets, special dinners, brunch and happy hour placeholders ready for admin editing."
+            eyebrow={copy.events.eyebrow}
+            title={copy.events.title}
+            description={copy.events.description}
           />
         </MotionReveal>
       </section>
@@ -25,7 +28,7 @@ export function EventsPage() {
           ))}
         </div>
       </section>
-      <CtaBanner title="Planning a group night?" description="Send a message for birthday tables, private areas and dinner before the music." />
+      <CtaBanner title={copy.events.ctaTitle} description={copy.events.ctaDescription} />
     </>
   );
 }
